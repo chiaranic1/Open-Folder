@@ -1,6 +1,9 @@
 const translations = {
   it: {
     description: "Scopri le auto nuove e usate di Autoservice Kerschbaumer in Val Gardena. Vendita, officina e assistenza.",
+    introAria: "Introduzione al sito",
+    introHint: "Scorri per entrare",
+    introSkip: "Entra nel sito",
     historyPageTitle: "La nostra storia — Autoservice Kerschbaumer",
     historyDescription: "Dal 1986, la passione per le auto di Hugo continua nella storia di famiglia di Autoservice Kerschbaumer.",
     legalPageTitle: "Privacy e note legali — Autoservice Kerschbaumer",
@@ -48,18 +51,26 @@ const translations = {
     storyLink: "Scopri la storia",
     storyImageAlt: "Un tecnico dell'officina al lavoro",
     historyEyebrow: "LA NOSTRA STORIA",
-    historyTitle: "Una passione che\nci accompagna dal 1986.",
-    historyIntro: "Una storia di famiglia iniziata con Hugo e cresciuta attorno alle auto, alle persone e alla fiducia.",
-    historyPhotoCaption: "Competenza costruita ogni giorno, insieme.",
-    historyChapterOne: "UNA PASSIONE TRAMANDATA",
-    historyChapterTitle: "Da Hugo a oggi:\nil valore di fare le cose bene.",
-    historyChapterText: "È da Hugo che nasce la passione di famiglia per le auto. Con il tempo è diventata un mestiere e un modo di accogliere ogni cliente: con cura, rispetto e parole chiare.",
-    historyChapterTwo: "CRESCERE, CON CURA",
-    historyValuesTitle: "La stessa passione.\nCompetenze sempre nuove.",
-    historyValuesText: "Formazione continua e attrezzature moderne aiutano il nostro team specializzato a prendersi cura della tua auto. Sicurezza e fiducia restano al centro, ogni giorno.",
+    historyTitle: "Dal 1986,\nuna storia di famiglia.",
+    historyIntro: "La passione di Hugo per le auto ha dato inizio a un percorso fatto di lavoro, persone e fiducia.",
+    historyYearCaption: "L’inizio di una passione",
+    historyFoundersAlt: "Hugo e Lidia Kerschbaumer",
+    historyFoundersCaption: "Hugo & Lidia Kerschbaumer · Capi senior",
+    historyChapterOne: "LE PRIME PAGINE",
+    historyChapterTitle: "Una passione\nche prende forma.",
+    historyChapterText: "Nel 1986, la passione di Hugo diventa il primo capitolo di una storia di famiglia. Dagli inizi in officina a oggi, sicurezza, trasparenza e fiducia restano il modo in cui ci prendiamo cura di ogni cliente.",
+    historyGarageAlt: "La sede dell'officina nei primi anni",
+    historyGarageCaption: "Gli inizi, in Val Gardena.",
+    historyWorkshopAlt: "Una delle prime officine della famiglia",
+    historyWorkshopCaption: "Il lavoro, ogni giorno.",
+    historyChapterTwo: "LE PERSONE, AL CENTRO",
+    historyValuesTitle: "La passione continua\nnelle persone.",
+    historyValuesText: "Hugo e Lidia, insieme a un team specializzato, hanno fatto crescere questa storia con competenza e attenzione. La formazione continua e attrezzature all’avanguardia mantengono vivo lo stesso impegno: sicurezza e fiducia, ogni giorno.",
+    historyIngridAlt: "Ingrid Kerschbaumer, amministrazione",
+    historyIngridCaption: "Ingrid Kerschbaumer · Amministrazione",
+    historyWernerAlt: "Werner Rieder, meccanico maestro artigiano",
+    historyWernerCaption: "Werner Rieder · Meccanico maestro artigiano",
     historyContactCta: "Vieni a conoscerci",
-    historyTeamImageAlt: "Una collaboratrice dell'azienda",
-    historyTeamCaption: "Le persone sono il cuore del nostro lavoro.",
     historyEndEyebrow: "UN LEGAME CHE CONTINUA",
     historyEndTitle: "Grazie per far parte\ndella nostra strada.",
     historyBackHome: "Torna alla homepage",
@@ -126,6 +137,9 @@ const translations = {
   },
   en: {
     description: "Discover new and used cars at Autoservice Kerschbaumer in Val Gardena. Car sales, workshop and assistance.",
+    introAria: "Website introduction",
+    introHint: "Scroll to enter",
+    introSkip: "Enter website",
     historyPageTitle: "Our story — Autoservice Kerschbaumer",
     historyDescription: "Since 1986, Hugo’s passion for cars has continued through the family story of Autoservice Kerschbaumer.",
     legalPageTitle: "Privacy & legal notice — Autoservice Kerschbaumer",
@@ -173,18 +187,26 @@ const translations = {
     storyLink: "Discover our story",
     storyImageAlt: "A technician at work in the workshop",
     historyEyebrow: "OUR STORY",
-    historyTitle: "A passion that has\nbeen with us since 1986.",
-    historyIntro: "A family story that began with Hugo and grew around cars, people and trust.",
-    historyPhotoCaption: "Expertise built together, every day.",
-    historyChapterOne: "A PASSION PASSED DOWN",
-    historyChapterTitle: "From Hugo to today:\nthe value of doing things well.",
-    historyChapterText: "Hugo’s passion for cars started our family story. Over time, it became our craft and our way of welcoming every customer: with care, respect and honest advice.",
-    historyChapterTwo: "GROWING WITH CARE",
-    historyValuesTitle: "The same passion.\nNew skills, every day.",
-    historyValuesText: "Ongoing training and modern equipment help our skilled team look after your car. Safety and trust remain at the heart of what we do.",
+    historyTitle: "Since 1986,\na family story.",
+    historyIntro: "Hugo’s passion for cars began a journey shaped by hard work, people and trust.",
+    historyYearCaption: "The start of a passion",
+    historyFoundersAlt: "Hugo and Lidia Kerschbaumer",
+    historyFoundersCaption: "Hugo & Lidia Kerschbaumer · Senior management",
+    historyChapterOne: "THE EARLY CHAPTERS",
+    historyChapterTitle: "A passion\nthat took shape.",
+    historyChapterText: "In 1986, Hugo’s passion became the first chapter of a family story. From the early workshop days to today, safety, transparency and trust remain at the heart of how we care for every customer.",
+    historyGarageAlt: "The workshop premises in the early years",
+    historyGarageCaption: "The beginning, in Val Gardena.",
+    historyWorkshopAlt: "One of the family’s early workshops",
+    historyWorkshopCaption: "The work, every day.",
+    historyChapterTwo: "PEOPLE AT THE HEART",
+    historyValuesTitle: "The passion lives on\nthrough people.",
+    historyValuesText: "Together with a skilled team, Hugo and Lidia built this story with care and expertise. Ongoing training and advanced equipment keep the same commitment alive: safety and trust, every day.",
+    historyIngridAlt: "Ingrid Kerschbaumer, administration",
+    historyIngridCaption: "Ingrid Kerschbaumer · Administration",
+    historyWernerAlt: "Werner Rieder, master mechanic",
+    historyWernerCaption: "Werner Rieder · Master mechanic",
     historyContactCta: "Come and meet us",
-    historyTeamImageAlt: "A member of the Autoservice Kerschbaumer team",
-    historyTeamCaption: "People are at the heart of what we do.",
     historyEndEyebrow: "A STORY THAT CONTINUES",
     historyEndTitle: "Thank you for being\npart of our journey.",
     historyBackHome: "Back to the homepage",
@@ -251,6 +273,9 @@ const translations = {
   },
   de: {
     description: "Entdecken Sie Neu- und Gebrauchtwagen bei Autoservice Kerschbaumer in Gröden. Fahrzeugverkauf, Werkstatt und Pannenhilfe.",
+    introAria: "Einführung in die Website",
+    introHint: "Zum Eintreten scrollen",
+    introSkip: "Website öffnen",
     historyPageTitle: "Unsere Geschichte — Autoservice Kerschbaumer",
     historyDescription: "Seit 1986 lebt Hugos Leidenschaft für Autos in der Familiengeschichte von Autoservice Kerschbaumer weiter.",
     legalPageTitle: "Datenschutz & rechtliche Hinweise — Autoservice Kerschbaumer",
@@ -298,18 +323,26 @@ const translations = {
     storyLink: "Unsere Geschichte entdecken",
     storyImageAlt: "Ein Techniker bei der Arbeit in der Werkstatt",
     historyEyebrow: "UNSERE GESCHICHTE",
-    historyTitle: "Eine Leidenschaft,\ndie uns seit 1986 begleitet.",
-    historyIntro: "Eine Familiengeschichte, die mit Hugo begann und rund um Autos, Menschen und Vertrauen gewachsen ist.",
-    historyPhotoCaption: "Kompetenz, die wir jeden Tag gemeinsam aufbauen.",
-    historyChapterOne: "EINE LEIDENSCHAFT, DIE WEITERGEGEBEN WIRD",
-    historyChapterTitle: "Von Hugo bis heute:\nDinge gut zu machen zählt.",
-    historyChapterText: "Mit Hugos Leidenschaft für Autos begann unsere Familiengeschichte. Daraus wurden unser Beruf und die Art, wie wir Kundinnen und Kunden begegnen: aufmerksam, respektvoll und offen.",
-    historyChapterTwo: "MIT SORGFALT WACHSEN",
-    historyValuesTitle: "Dieselbe Leidenschaft.\nJeden Tag neue Kompetenzen.",
-    historyValuesText: "Weiterbildungen und moderne Ausstattung helfen unserem Fachteam, sich um Ihr Auto zu kümmern. Sicherheit und Vertrauen stehen dabei immer im Mittelpunkt.",
+    historyTitle: "Seit 1986,\neine Familiengeschichte.",
+    historyIntro: "Hugos Leidenschaft für Autos gab den Anstoß für einen Weg voller Arbeit, Begegnungen und Vertrauen.",
+    historyYearCaption: "Der Anfang einer Leidenschaft",
+    historyFoundersAlt: "Hugo und Lidia Kerschbaumer",
+    historyFoundersCaption: "Hugo & Lidia Kerschbaumer · Geschäftsleitung",
+    historyChapterOne: "DIE ERSTEN KAPITEL",
+    historyChapterTitle: "Eine Leidenschaft,\ndie Gestalt annimmt.",
+    historyChapterText: "1986 wurde Hugos Leidenschaft zum ersten Kapitel einer Familiengeschichte. Von den Anfängen in der Werkstatt bis heute prägen Sicherheit, Transparenz und Vertrauen die Betreuung unserer Kundinnen und Kunden.",
+    historyGarageAlt: "Der Werkstattstandort in den Anfangsjahren",
+    historyGarageCaption: "Die Anfänge in Gröden.",
+    historyWorkshopAlt: "Eine der ersten Werkstätten der Familie",
+    historyWorkshopCaption: "Die Arbeit, Tag für Tag.",
+    historyChapterTwo: "MENSCHEN IM MITTELPUNKT",
+    historyValuesTitle: "Die Leidenschaft lebt\nin Menschen weiter.",
+    historyValuesText: "Gemeinsam mit einem spezialisierten Team haben Hugo und Lidia diese Geschichte mit Kompetenz und Sorgfalt geprägt. Regelmäßige Weiterbildung und moderne Ausrüstung halten dasselbe Versprechen lebendig: Sicherheit und Vertrauen, jeden Tag.",
+    historyIngridAlt: "Ingrid Kerschbaumer, Verwaltung",
+    historyIngridCaption: "Ingrid Kerschbaumer · Verwaltung",
+    historyWernerAlt: "Werner Rieder, Kfz-Meister",
+    historyWernerCaption: "Werner Rieder · Kfz-Meister",
     historyContactCta: "Lernen Sie uns kennen",
-    historyTeamImageAlt: "Ein Mitglied des Autoservice-Kerschbaumer-Teams",
-    historyTeamCaption: "Menschen stehen im Mittelpunkt unserer Arbeit.",
     historyEndEyebrow: "EINE GESCHICHTE, DIE WEITERGEHT",
     historyEndTitle: "Danke, dass Sie Teil\nunseres Weges sind.",
     historyBackHome: "Zurück zur Startseite",
@@ -464,3 +497,96 @@ mainNav.querySelectorAll("a").forEach((link) => {
     menuToggle.setAttribute("aria-expanded", "false");
   });
 });
+
+const motionGroups = [
+  [".hero-copy > *, .hero-foot", "rise"],
+  [".section-heading > *, .inventory-card, .benefit, .story-inner > *", "rise"],
+  [".inventory-image-wrap img, .service-feature, .service-row, .contact-panel > *", "reveal"],
+  [".history-lead-copy > *, .history-lead-image, .history-archive-copy > *, .history-archive-image, .history-values-copy > *, .history-team-photo, .history-end > *", "rise"],
+  [".legal-heading > *, .legal-index, .legal-section, .legal-disclaimer, .footer-inner > *", "rise"]
+];
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
+  document.body.classList.add("motion-enabled");
+
+  motionGroups.forEach(([selector, effect]) => {
+    document.querySelectorAll(selector).forEach((element, index) => {
+      element.classList.add("motion-item", `motion-${effect}`);
+      element.style.setProperty("--motion-delay", `${Math.min(index % 5, 4) * 85}ms`);
+    });
+  });
+
+  document.querySelectorAll(".hero .motion-item").forEach((element) => {
+    element.classList.add("is-visible");
+  });
+
+  const motionObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.14, rootMargin: "0px 0px -6% 0px" });
+
+  document.querySelectorAll(".motion-item:not(.is-visible)").forEach((element) => {
+    motionObserver.observe(element);
+  });
+}
+
+const siteIntro = document.querySelector("#site-intro");
+const introSkip = document.querySelector("#intro-skip");
+
+if (siteIntro && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const introSpace = document.querySelector(".intro-scroll-space");
+  const pageContent = [...document.body.children].filter((element) => (
+    element !== introSpace && element !== siteIntro && !element.classList.contains("icon-definitions")
+  ));
+  document.body.classList.add("intro-active");
+  let introFrame = 0;
+  let introComplete = window.scrollY >= introSpace.offsetHeight;
+
+  const finishIntro = () => {
+    introComplete = true;
+    siteIntro.hidden = true;
+    document.body.classList.remove("intro-active");
+    pageContent.forEach((element) => {
+      element.inert = false;
+    });
+    window.removeEventListener("scroll", updateIntro);
+    window.removeEventListener("resize", updateIntro);
+    window.scrollTo({ top: 0, behavior: "instant" });
+  };
+
+  const updateIntro = () => {
+    if (introComplete || introFrame) return;
+    introFrame = window.requestAnimationFrame(() => {
+      introFrame = 0;
+      const progress = Math.min(1, Math.max(0, window.scrollY / introSpace.offsetHeight));
+      const fade = Math.min(1, Math.max(0, (progress - 0.76) / 0.24));
+      siteIntro.style.setProperty("--intro-progress", progress.toFixed(4));
+      siteIntro.style.setProperty("--intro-opacity", (1 - fade).toFixed(4));
+      siteIntro.style.setProperty("--intro-hint-opacity", (1 - Math.min(1, progress * 2.5)).toFixed(4));
+
+      if (progress >= 1) finishIntro();
+    });
+  };
+
+  if (introComplete) {
+    siteIntro.hidden = true;
+    const restoredScrollY = Math.max(0, window.scrollY - introSpace.offsetHeight);
+    document.body.classList.remove("intro-active");
+    window.scrollTo({ top: restoredScrollY, behavior: "instant" });
+  } else {
+    siteIntro.hidden = false;
+    pageContent.forEach((element) => {
+      element.inert = true;
+    });
+    window.addEventListener("scroll", updateIntro, { passive: true });
+    window.addEventListener("resize", updateIntro);
+    introSkip.addEventListener("click", () => {
+      window.scrollTo({ top: introSpace.offsetHeight, behavior: "smooth" });
+    });
+    updateIntro();
+  }
+}
