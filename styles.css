@@ -1497,7 +1497,8 @@ p {
 
 .site-intro {
   --intro-progress: 0;
-  --intro-opacity: 1;
+  --intro-logo-opacity: 1;
+  --intro-bloom-opacity: 0;
   --intro-hint-opacity: 1;
   position: fixed;
   z-index: 100;
@@ -1505,14 +1506,42 @@ p {
   display: grid;
   overflow: hidden;
   place-items: center;
-  background: #090a09;
-  opacity: var(--intro-opacity);
+  background: transparent;
   pointer-events: auto;
+}
+
+.site-intro::before,
+.site-intro::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.site-intro::before {
+  z-index: 0;
+  background: #090a09;
+  opacity: calc(1 - var(--intro-progress));
   will-change: opacity;
+}
+
+.site-intro::after {
+  z-index: 1;
+  background: radial-gradient(
+    circle at center,
+    rgb(215 242 59 / 88%) 0%,
+    rgb(215 242 59 / 54%) 16%,
+    rgb(215 242 59 / 24%) 38%,
+    transparent 72%
+  );
+  opacity: var(--intro-bloom-opacity);
+  transform: scale(calc(.18 + var(--intro-progress) * 3.6));
+  will-change: opacity, transform;
 }
 
 .intro-stage {
   position: relative;
+  z-index: 2;
   display: grid;
   width: 100%;
   height: 100%;
@@ -1524,9 +1553,10 @@ p {
   width: min(76vw, 920px);
   height: min(38vw, 460px);
   overflow: hidden;
-  transform: scale(calc(.68 + var(--intro-progress) * 9));
+  opacity: var(--intro-logo-opacity);
+  transform: scale(calc(.68 + var(--intro-progress) * 7.2));
   transform-origin: center;
-  will-change: transform;
+  will-change: opacity, transform;
 }
 
 .intro-logo {
@@ -1537,7 +1567,6 @@ p {
   height: 200%;
   max-width: none;
   object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(87%) sepia(82%) saturate(700%) hue-rotate(17deg) brightness(108%) contrast(98%);
 }
 
 .intro-instruction {
@@ -1556,6 +1585,7 @@ p {
   text-transform: uppercase;
   transform: translateX(-50%);
   white-space: nowrap;
+  z-index: 2;
 }
 
 .intro-scroll-cue {
@@ -1575,6 +1605,7 @@ p {
 
 .intro-skip {
   position: absolute;
+  z-index: 2;
   right: clamp(20px, 4vw, 56px);
   bottom: clamp(23px, 4vh, 42px);
   padding: 8px 0;
@@ -1609,7 +1640,7 @@ p {
   .intro-logo-window {
     width: 88vw;
     height: 44vw;
-    transform: scale(calc(.72 + var(--intro-progress) * 8));
+    transform: scale(calc(.72 + var(--intro-progress) * 7));
   }
 
   .intro-instruction {

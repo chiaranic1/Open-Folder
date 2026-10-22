@@ -564,8 +564,14 @@ if (siteIntro && !window.matchMedia("(prefers-reduced-motion: reduce)").matches)
       introFrame = 0;
       const progress = Math.min(1, Math.max(0, window.scrollY / introSpace.offsetHeight));
       const fade = Math.min(1, Math.max(0, (progress - 0.76) / 0.24));
+      const bloom = progress < 0.2
+        ? 0
+        : progress < 0.68
+          ? (progress - 0.2) / 0.48
+          : Math.max(0, 1 - (progress - 0.68) / 0.32);
       siteIntro.style.setProperty("--intro-progress", progress.toFixed(4));
-      siteIntro.style.setProperty("--intro-opacity", (1 - fade).toFixed(4));
+      siteIntro.style.setProperty("--intro-logo-opacity", (1 - fade).toFixed(4));
+      siteIntro.style.setProperty("--intro-bloom-opacity", bloom.toFixed(4));
       siteIntro.style.setProperty("--intro-hint-opacity", (1 - Math.min(1, progress * 2.5)).toFixed(4));
 
       if (progress >= 1) finishIntro();
