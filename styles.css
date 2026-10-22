@@ -635,10 +635,14 @@ p {
   background: #f0f2ed;
 }
 
+.services.section-pad {
+  padding-block: clamp(68px, 8vw, 100px);
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: clamp(14px, 2vw, 22px);
 }
 
 .service-feature {
@@ -708,19 +712,19 @@ p {
 .service-row {
   display: grid;
   width: 100%;
-  min-height: 87px;
-  grid-template-columns: 38px 1fr 18px;
+  min-height: 84px;
+  grid-template-columns: 36px 1fr 18px;
   align-items: center;
   gap: 14px;
-  padding: 14px 21px;
+  padding: 13px 18px;
   appearance: none;
   border: 0;
   border-bottom: 1px solid var(--line);
-  background: var(--white);
+  background: #1b1d1b;
   color: var(--ink);
   cursor: pointer;
   font: inherit;
-  transition: background .2s ease;
+  transition: background .22s ease, color .22s ease;
   text-align: left;
 }
 
@@ -729,7 +733,13 @@ p {
 }
 
 .service-row:hover {
-  background: #f8f9f6;
+  background: var(--lime);
+  color: #11130e;
+}
+
+.service-row:focus-visible {
+  background: var(--lime);
+  color: #11130e;
 }
 
 .service-icon {
@@ -738,8 +748,15 @@ p {
   height: 34px;
   place-items: center;
   border-radius: 50%;
-  background: #eff2e9;
-  color: #53652c;
+  background: #2c3026;
+  color: var(--lime);
+  transition: background .22s ease, color .22s ease;
+}
+
+.service-row:hover .service-icon,
+.service-row:focus-visible .service-icon {
+  background: rgb(17 19 14 / 12%);
+  color: #11130e;
   font-size: 15px;
 }
 
@@ -758,13 +775,19 @@ p {
   font-size: 10px;
 }
 
+.service-row:hover small,
+.service-row:focus-visible small {
+  color: #25291c;
+}
+
 .row-arrow {
   color: #888e84;
   font-size: 14px;
-  transition: transform .2s ease;
+  transition: transform .2s ease, color .22s ease;
 }
 
 .service-row:hover .row-arrow {
+  color: #11130e;
   transform: translate(2px, -2px);
 }
 
@@ -1669,14 +1692,14 @@ p {
 }
 
 .service-dialog-content {
-  padding: clamp(25px, 6vw, 42px);
+  padding: clamp(24px, 5vw, 36px);
 }
 
 .service-dialog-back {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  margin: 0 0 32px;
+  gap: 12px;
+  margin: 0 0 28px;
   padding: 0;
   border: 0;
   background: transparent;
@@ -1690,9 +1713,25 @@ p {
   color: var(--lime);
 }
 
-.service-dialog-back .icon {
+.service-dialog-back-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  place-items: center;
+  border: 1px solid #545a50;
+  border-radius: 50%;
+  transition: border-color .2s ease, background .2s ease, color .2s ease;
+}
+
+.service-dialog-back-icon .icon {
   width: 17px;
   height: 17px;
+}
+
+.service-dialog-back:hover .service-dialog-back-icon {
+  border-color: var(--lime);
+  background: rgb(215 242 59 / 8%);
 }
 
 .service-contact-dialog .eyebrow {
@@ -1982,15 +2021,31 @@ body {
 
 .service-row {
   border-bottom-color: #303330;
+  background: #1b1d1b;
 }
 
-.service-row:hover {
-  background: #242724;
+.service-row:hover,
+.service-row:focus-visible {
+  background: var(--lime);
+  color: #11130e;
 }
 
 .service-icon {
   background: #2c3026;
   color: var(--lime);
+}
+
+.service-row:hover .service-icon,
+.service-row:focus-visible .service-icon {
+  background: rgb(17 19 14 / 12%);
+  color: #11130e;
+}
+
+.service-row:hover small,
+.service-row:focus-visible small,
+.service-row:hover .row-arrow,
+.service-row:focus-visible .row-arrow {
+  color: #25291c;
 }
 
 .row-arrow {

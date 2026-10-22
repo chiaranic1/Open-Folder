@@ -512,6 +512,7 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     languageMenu.hidden = true;
     languageButton.setAttribute("aria-expanded", "false");
+    if (serviceDialog?.open) serviceDialog.close();
   }
 });
 
@@ -561,6 +562,11 @@ document.querySelector("#service-dialog-back").addEventListener("click", () => {
 
 serviceDialog.addEventListener("click", (event) => {
   if (event.target === serviceDialog) serviceDialog.close();
+});
+
+serviceDialog.addEventListener("cancel", (event) => {
+  event.preventDefault();
+  serviceDialog.close();
 });
 
 const motionGroups = [
