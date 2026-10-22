@@ -127,12 +127,22 @@ const translations = {
     serviceWash: "Car wash",
     serviceWashText: "Pulizia di interni ed esterni.",
     contactEyebrow: "CI SIAMO",
-    contactTitle: "Hai trovato la tua auto?\nParliamone.",
+    contactTitle: "Parliamo della tua auto.",
     contactText: "Per informazioni sulle auto o sui nostri servizi, contattaci. Siamo qui per aiutarti.",
     whatsappCta: "Scrivici su WhatsApp",
     addressLabel: "DOVE SIAMO",
     callLabel: "CHIAMACI",
     emailLabel: "VENDITA AUTO",
+    saveContactLabel: "CONTATTO",
+    saveContact: "Salva il contatto",
+    carEmailAria: "Scrivi a car@autoservicekerschbaumer.it",
+    serviceDialogTitle: "Parliamo del servizio",
+    serviceDialogText: "Scegli come preferisci contattarci.",
+    serviceDialogEyebrow: "CONTATTI",
+    serviceCall: "Chiamata",
+    serviceMail: "E-mail",
+    serviceBack: "Torna alla homepage",
+    serviceMailSubject: "Informazioni sui servizi",
     footerNote: "La tua mobilità, la nostra passione."
   },
   en: {
@@ -263,12 +273,22 @@ const translations = {
     serviceWash: "Car wash",
     serviceWashText: "Interior and exterior cleaning.",
     contactEyebrow: "WE’RE HERE",
-    contactTitle: "Found your car?\nLet’s talk.",
+    contactTitle: "Let’s talk about your car.",
     contactText: "Get in touch for information about our cars or services. We’re here to help.",
     whatsappCta: "Message us on WhatsApp",
     addressLabel: "FIND US",
     callLabel: "CALL US",
     emailLabel: "CAR SALES",
+    saveContactLabel: "CONTACT",
+    saveContact: "Save contact",
+    carEmailAria: "Email car@autoservicekerschbaumer.it",
+    serviceDialogTitle: "Let’s talk about this service",
+    serviceDialogText: "Choose how you would like to contact us.",
+    serviceDialogEyebrow: "GET IN TOUCH",
+    serviceCall: "Call",
+    serviceMail: "Email",
+    serviceBack: "Back to homepage",
+    serviceMailSubject: "Enquiry about your services",
     footerNote: "Your mobility, our passion."
   },
   de: {
@@ -398,12 +418,22 @@ const translations = {
     serviceWash: "Autowäsche",
     serviceWashText: "Gründliche Innen- und Außenreinigung.",
     contactEyebrow: "WIR SIND DA",
-    contactTitle: "Ihr Auto gefunden?\nSprechen wir darüber.",
+    contactTitle: "Sprechen wir über Ihr Auto.",
     contactText: "Kontaktieren Sie uns für Informationen zu unseren Fahrzeugen und Leistungen. Wir helfen Ihnen gerne weiter.",
     whatsappCta: "Schreiben Sie uns auf WhatsApp",
     addressLabel: "SO FINDEN SIE UNS",
     callLabel: "RUFEN SIE UNS AN",
     emailLabel: "FAHRZEUGVERKAUF",
+    saveContactLabel: "KONTAKT",
+    saveContact: "Kontakt speichern",
+    carEmailAria: "E-Mail an car@autoservicekerschbaumer.it",
+    serviceDialogTitle: "Sprechen wir über den Service",
+    serviceDialogText: "Wählen Sie, wie Sie uns kontaktieren möchten.",
+    serviceDialogEyebrow: "KONTAKT",
+    serviceCall: "Anrufen",
+    serviceMail: "E-Mail",
+    serviceBack: "Zurück zur Startseite",
+    serviceMailSubject: "Anfrage zu unseren Services",
     footerNote: "Ihre Mobilität, unsere Leidenschaft."
   }
 };
@@ -496,6 +526,41 @@ mainNav.querySelectorAll("a").forEach((link) => {
     mainNav.classList.remove("is-open");
     menuToggle.setAttribute("aria-expanded", "false");
   });
+});
+
+const heroSlides = document.querySelectorAll(".hero-slide");
+
+if (heroSlides.length > 1 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  let activeSlide = 0;
+  window.setInterval(() => {
+    if (document.hidden) return;
+    heroSlides[activeSlide].classList.remove("is-active");
+    activeSlide = (activeSlide + 1) % heroSlides.length;
+    heroSlides[activeSlide].classList.add("is-active");
+  }, 2000);
+}
+
+const serviceDialog = document.querySelector("#service-contact-dialog");
+const selectedService = document.querySelector("#service-dialog-selected");
+const serviceDialogEmail = document.querySelector("#service-dialog-email");
+
+document.querySelectorAll("[data-service-trigger]").forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const copy = translations[document.documentElement.lang] || translations.it;
+    const serviceName = copy[trigger.dataset.serviceKey] || trigger.textContent.trim();
+    selectedService.textContent = serviceName;
+    serviceDialogEmail.href = `mailto:info@autoservicekerschbaumer.it?subject=${encodeURIComponent(`${copy.serviceMailSubject}: ${serviceName}`)}`;
+    serviceDialog.showModal();
+  });
+});
+
+document.querySelector("#service-dialog-back").addEventListener("click", () => {
+  serviceDialog.close();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+serviceDialog.addEventListener("click", (event) => {
+  if (event.target === serviceDialog) serviceDialog.close();
 });
 
 const motionGroups = [
