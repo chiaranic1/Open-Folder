@@ -89,7 +89,7 @@ const translations = {
     navContact: "Contatti",
     navCta: "Vedi le auto",
     heroEyebrow: "AUTOMOBILI · VAL GARDENA",
-    heroTitle: "La tua prossima auto\nti aspetta qui.",
+    heroTitle: "Qui la tua auto\nè tutto.",
     heroDescription: "Auto nuove e usate, selezionate con cura. Ti aiutiamo a trovare la tua, con un team al tuo fianco.",
     heroCta: "Scopri le auto disponibili",
     heroSecondary: "Parla con il nostro team",
