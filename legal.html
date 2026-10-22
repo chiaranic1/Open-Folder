@@ -13,6 +13,11 @@
     <script src="script.js" defer></script>
   </head>
   <body data-page="legal">
+    <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" /></symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol>
+      <symbol id="icon-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" /></symbol>
+    </svg>
     <div class="topbar">
       <div class="shell topbar-inner">
         <span data-i18n="topbar">Il tuo partner per la mobilità in Val Gardena</span>
@@ -25,12 +30,13 @@
         <a class="brand" href="index.html" aria-label="Autoservice Kerschbaumer — home" data-i18n-aria="homeAria">
           <span class="brand-logo-window"><img class="brand-logo" src="assets/ask-logo.png" alt="" /></span>
         </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
-          <span></span><span></span>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Apri il menu" data-i18n-aria="menu">
+          <svg class="icon menu-icon" aria-hidden="true"><use href="#icon-menu" /></svg>
           <span class="sr-only" data-i18n="menu">Apri il menu</span>
         </button>
         <nav class="main-nav" id="main-nav" aria-label="Navigazione principale" data-i18n-aria="navAria">
           <a href="index.html#auto" data-i18n="navCars">Auto in vendita</a>
+          <a href="history.html" data-i18n="navStory">La nostra storia</a>
           <a href="index.html#servizi" data-i18n="navServices">Servizi</a>
           <a href="index.html#contatti" data-i18n="navContact">Contatti</a>
         </nav>
@@ -38,7 +44,7 @@
           <div class="language-switcher">
             <button class="language-button" type="button" aria-label="Seleziona la lingua" data-i18n-aria="languageAria" aria-expanded="false" aria-controls="language-menu">
               <span class="current-language">IT</span>
-              <svg viewBox="0 0 12 12" aria-hidden="true"><path d="m2 4 4 4 4-4" /></svg>
+              <svg class="icon chevron-icon" aria-hidden="true"><use href="#icon-chevron-down" /></svg>
             </button>
             <div class="language-menu" id="language-menu" hidden>
               <button type="button" data-language="it">Italiano <span>IT</span></button>
@@ -47,7 +53,7 @@
             </div>
           </div>
           <a class="button button-dark header-cta" href="https://listaveicoli.autoservicekerschbaumer.it/lista-veicoli/" target="_blank" rel="noopener noreferrer">
-            <span data-i18n="navCta">Vedi le auto</span><span class="button-arrow" aria-hidden="true">↗</span>
+            <span data-i18n="navCta">Vedi le auto</span><svg class="icon button-arrow" aria-hidden="true"><use href="#icon-arrow-up-right" /></svg>
           </a>
         </div>
       </div>
@@ -71,14 +77,16 @@
 
         <div class="legal-content">
           <section class="legal-section" id="societa">
-            <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="legalSectionCompany">01 / AZIENDA</span></p>
+            <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="legalSectionCompany">AZIENDA</span></p>
             <h2 data-i18n="legalCompanyHeading">Chi siamo</h2>
             <p data-i18n="legalCompanyText">I riferimenti e i dati identificativi pubblicati dall’azienda sono:</p>
             <dl class="legal-details">
               <div><dt data-i18n="legalCompanyLabel">Ragione sociale</dt><dd>Autoservice Kerschbaumer Srl</dd></div>
               <div><dt data-i18n="legalAddressLabel">Sede indicata sul sito aziendale</dt><dd>S. Michele Nr. 49, 39040 Castelrotto (BZ), Italia</dd></div>
               <div><dt>Partita IVA</dt><dd>IT01500890213</dd></div>
+              <div><dt data-i18n="legalReaLabel">Numero REA</dt><dd>BZ-125029</dd></div>
               <div><dt data-i18n="legalRecipientLabel">Codice destinatario</dt><dd>T04ZHR3</dd></div>
+              <div><dt data-i18n="legalHostingLabel">Gestione sito / hosting indicati</dt><dd>Chiara Nichele</dd></div>
               <div><dt data-i18n="legalPhoneLabel">Telefono</dt><dd><a href="tel:+390471797082">+39 0471 797082</a></dd></div>
               <div><dt data-i18n="legalEmailLabel">E-mail</dt><dd><a href="mailto:info@autoservicekerschbaumer.it">info@autoservicekerschbaumer.it</a></dd></div>
               <div><dt>PEC</dt><dd><a href="mailto:autoservicekerschbaumer@legalmail.it">autoservicekerschbaumer@legalmail.it</a></dd></div>
@@ -86,33 +94,33 @@
           </section>
 
           <section class="legal-section" id="privacy">
-            <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="legalSectionPrivacy">02 / DATI PERSONALI</span></p>
+            <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="legalSectionPrivacy">DATI PERSONALI</span></p>
             <h2 data-i18n="legalPrivacyHeading">Privacy</h2>
             <p data-i18n="legalPrivacyText">Il titolare del trattamento è Autoservice Kerschbaumer Srl, contattabile all’indirizzo info@autoservicekerschbaumer.it. Questo sito non contiene moduli di invio, account o strumenti di analisi e pubblicità. Se ci contatti tramite e-mail, telefono o WhatsApp, usiamo i dati che ci comunichi per rispondere alla tua richiesta e, se necessario, proseguire il rapporto. La base giuridica dipende dalla richiesta e può consistere nell’esecuzione di misure precontrattuali richieste dall’interessato o nell’adempimento di obblighi di legge. I dati sono accessibili soltanto alle persone autorizzate e ai fornitori necessari a gestire le comunicazioni; possono essere conservati per il tempo necessario a gestire la richiesta e per gli eventuali obblighi di legge. Puoi chiedere accesso, rettifica o cancellazione dei dati, limitazione od opposizione al trattamento nei casi previsti dal GDPR e presentare reclamo al Garante per la protezione dei dati personali.</p>
-            <a class="legal-external-link" href="https://autoservicekerschbaumer.it/privacy-policy/" target="_blank" rel="noopener noreferrer">
-              <span data-i18n="legalPrivacyLink">Consulta l’informativa privacy pubblicata sul sito aziendale</span><span aria-hidden="true">↗</span>
+            <a class="legal-external-link" href="mailto:info@autoservicekerschbaumer.it">
+              <span data-i18n="legalPrivacyLink">Per informazioni privacy, contattaci via e-mail</span><svg class="icon text-arrow" aria-hidden="true"><use href="#icon-arrow-up-right" /></svg>
             </a>
           </section>
 
           <section class="legal-section" id="cookie">
-            <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="legalSectionCookies">03 / PREFERENZE</span></p>
+            <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="legalSectionCookies">PREFERENZE</span></p>
             <h2 data-i18n="legalCookieHeading">Cookie e archiviazione</h2>
-            <p data-i18n="legalCookieText">Questa versione del sito non integra strumenti di analisi, pubblicità, profili o cookie di terze parti. Il selettore della lingua funziona senza salvare cookie o preferenze sul dispositivo. Il servizio di hosting che pubblica il sito potrebbe trattare i dati tecnici indispensabili per consegnare le pagine e proteggere il servizio; per i dettagli occorre consultare l’informativa del fornitore effettivamente scelto.</p>
+            <p data-i18n="legalCookieText">Questa versione del sito non integra strumenti di analisi, pubblicità, profili o cookie di terze parti. Il selettore della lingua funziona senza salvare cookie o preferenze sul dispositivo. L’hosting indicato per la pubblicazione è gestito da Chiara Nichele. Il servizio di hosting potrebbe trattare dati tecnici indispensabili per consegnare le pagine e proteggere il servizio; le modalità effettive dipendono dalla configurazione scelta.</p>
           </section>
 
           <section class="legal-section" id="servizi-esterni">
-            <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="legalSectionExternal">04 / COLLEGAMENTI</span></p>
+            <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="legalSectionExternal">COLLEGAMENTI</span></p>
             <h2 data-i18n="legalExternalHeading">Servizi esterni</h2>
             <p data-i18n="legalExternalText">I link a WhatsApp, alla lista dei veicoli, alle mappe e al sito aziendale aprono servizi gestiti da altri operatori. Seguendo un link, il servizio esterno può trattare dati secondo le proprie condizioni e informative. Questo sito non controlla le modalità di trattamento dei servizi esterni; ti consigliamo di consultare le relative informative prima di usarli.</p>
           </section>
 
           <section class="legal-section" id="vendita">
-            <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="legalSectionSales">05 / INFORMAZIONI</span></p>
+            <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="legalSectionSales">INFORMAZIONI</span></p>
             <h2 data-i18n="legalSalesHeading">Informazioni sulla vendita</h2>
             <p data-i18n="legalSalesText">Le informazioni sulle auto disponibili sono mostrate nel gestionale esterno. Le specifiche, il prezzo, la disponibilità e le condizioni applicabili vengono confermati dall’azienda nell’offerta e nei documenti di acquisto. La navigazione di questo sito non conclude da sola un contratto di compravendita.</p>
           </section>
 
-          <p class="legal-disclaimer" data-i18n="legalDisclaimer">Le presenti informazioni descrivono questa versione del sito. Prima della pubblicazione definitiva, la società deve verificare i dati e integrare, ove applicabile, ufficio del Registro delle Imprese, numero REA e capitale sociale; deve inoltre aggiornare l’informativa in base all’hosting e ai trattamenti realmente svolti.</p>
+          <p class="legal-disclaimer" data-i18n="legalDisclaimer">Le presenti informazioni descrivono questa versione del sito. Prima della pubblicazione definitiva, la società deve confermare il capitale sociale, il fornitore e la configurazione tecnica dell’hosting, nonché verificare servizi esterni, cookie e trattamenti effettivamente attivi. L’informativa privacy va aggiornata di conseguenza.</p>
         </div>
       </div>
     </main>
@@ -125,7 +133,7 @@
         <span data-i18n="footerNote">La tua mobilità, la nostra passione.</span>
         <div class="footer-links">
           <a href="index.html" data-i18n="legalBackHome">Torna al sito</a>
-          <a href="https://autoservicekerschbaumer.it/" target="_blank" rel="noopener noreferrer">autoservicekerschbaumer.it <span aria-hidden="true">↗</span></a>
+          <a href="history.html" data-i18n="navStory">La nostra storia</a>
         </div>
       </div>
     </footer>
